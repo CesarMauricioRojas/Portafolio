@@ -1,0 +1,63 @@
+.nav-bar {
+  /* border: 2px red solid; */
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 2;
+}
+.nav-bar img {
+  height: 100px;
+}
+.nav-bar ul {
+  /* border: 2px red solid; */
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+.nav-bar li {
+  border: 2px red solid;
+  margin-right: 25px;
+}
+.nav-bar div {
+  border: 2px red solid;
+  display: flex;
+  align-items: center;
+}
+.nav-bar button {
+  margin-right: 25px;
+}
+.nav-bar .hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: rgb(53, 29, 29);
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  .nav-bar {
+    justify-content: space-between;
+
+  }
+  .nav-bar img {
+    height: 80px;
+  }
+  .nav-bar .hamburger {
+    display: block; /* Muestra el botón del menú en tamaños pequeños */
+  }
+
+  .nav-bar .menu {
+    /* Oculta el menú por defecto en tamaños pequeños */
+    display: none;
+    flex-direction: column;
+  }
+
+  .nav-bar .menu.open {
+    display: flex; /* Muestra el menú cuando isMenuOpen es verdadero */
+  }
+}
